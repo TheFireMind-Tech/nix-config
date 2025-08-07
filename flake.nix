@@ -46,19 +46,12 @@
 
     # Define user configurations
     users = {
-      "alexander.nabokikh" = {
+      commander = {
         avatar = ./files/avatar/face;
-        email = "alexander.nabokikh@olx.pl";
-        fullName = "Alexander Nabokikh";
-        gitKey = "C5810093";
-        name = "alexander.nabokikh";
-      };
-      nabokikh = {
-        avatar = ./files/avatar/face;
-        email = "alexander.nabokikh@olx.pl";
-        fullName = "Alexander Nabokikh";
-        gitKey = "C5810093";
-        name = "nabokikh";
+        email = "thefiremindtech@gmail.com";
+        fullName = "Adam Kercheval";
+        gitKey = "108C0A0F94FEC264";
+        name = "commander";
       };
     };
 
@@ -105,6 +98,7 @@
   in {
     nixosConfigurations = {
       energy = mkNixosConfiguration "energy" "nabokikh";
+      nixos-virt = mkNixosConfiguration "nixos-virt" "commander"; 
     };
 
     darwinConfigurations = {
@@ -114,6 +108,7 @@
     homeConfigurations = {
       "alexander.nabokikh@PL-OLX-KCGXHGK3PY" = mkHomeConfiguration "aarch64-darwin" "alexander.nabokikh" "PL-OLX-KCGXHGK3PY";
       "nabokikh@energy" = mkHomeConfiguration "x86_64-linux" "nabokikh" "energy";
+      "commander@nixos-virt" = mkHomeConfiguration "aarch64-linux" "commander" "nixos-virt";    
     };
 
     overlays = import ./overlays {inherit inputs;};
