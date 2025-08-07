@@ -43,6 +43,9 @@
         BatteryShowPercentage = true;
         NowPlaying = false;
       };
+      #clock
+      menuExtraClock.Show24Hour = true;
+      menuExtraClock.ShowSeconds = true;
       CustomUserPreferences = {
         "com.brave.Browser" = {
           NSUserKeyEquivalents = {
@@ -101,7 +104,7 @@
             };
             "64" = {
               # Disable 'Cmd + Space' for Spotlight Search
-              enabled = false;
+              enabled = true;
             };
             "65" = {
               # Disable 'Cmd + Alt + Space' for Finder search window
