@@ -8,7 +8,7 @@
     ../misc/qt
     ../programs/aerospace
     ../programs/alacritty
-    ../programs/albert
+#    ../programs/albert
     ../programs/atuin
     ../programs/bat
     ../programs/brave
@@ -53,12 +53,13 @@
       if pkgs.stdenv.isDarwin
       then "/Users/${userConfig.name}"
       else "/home/${userConfig.name}";
+    shellAliases.home-manager = "home-manager -b hm.bak";
   };
 
   # Ensure common packages are installed
   home.packages = with pkgs;
     [
-      anki-bin
+#      anki-bin
       awscli2
       dig
       du-dust
