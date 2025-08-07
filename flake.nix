@@ -97,17 +97,16 @@
       };
   in {
     nixosConfigurations = {
-      energy = mkNixosConfiguration "energy" "nabokikh";
       nixos-virt = mkNixosConfiguration "nixos-virt" "commander"; 
     };
 
     darwinConfigurations = {
       "PL-OLX-KCGXHGK3PY" = mkDarwinConfiguration "PL-OLX-KCGXHGK3PY" "alexander.nabokikh";
+      "mbp-m3" = mkDarwinConfiguration "mbp-m3" "commander";
     };
 
     homeConfigurations = {
-      "alexander.nabokikh@PL-OLX-KCGXHGK3PY" = mkHomeConfiguration "aarch64-darwin" "alexander.nabokikh" "PL-OLX-KCGXHGK3PY";
-      "nabokikh@energy" = mkHomeConfiguration "x86_64-linux" "nabokikh" "energy";
+      "commander@PL-OLX-KCGXHGK3PY" = mkHomeConfiguration "aarch64-darwin" "commander" "mbp-m3";
       "commander@nixos-virt" = mkHomeConfiguration "aarch64-linux" "commander" "nixos-virt";    
     };
 
