@@ -98,15 +98,15 @@
   in {
     nixosConfigurations = {
       nixos-virt = mkNixosConfiguration "nixos-virt" "commander"; 
+      proxnix-virt = mkNixosConfiguration "proxnix-virt" "commander"; 
     };
 
     darwinConfigurations = {
-      "PL-OLX-KCGXHGK3PY" = mkDarwinConfiguration "PL-OLX-KCGXHGK3PY" "alexander.nabokikh";
       "mbp-m3" = mkDarwinConfiguration "mbp-m3" "commander";
     };
 
     homeConfigurations = {
-      "commander@PL-OLX-KCGXHGK3PY" = mkHomeConfiguration "aarch64-darwin" "commander" "mbp-m3";
+      "commander@mbp-m3" = mkHomeConfiguration "aarch64-darwin" "commander" "mbp-m3";
       "commander@nixos-virt" = mkHomeConfiguration "aarch64-linux" "commander" "nixos-virt";    
     };
 

@@ -4,11 +4,10 @@
     #inputs.hardware.nixosModules.common-cpu-amd
     ./hardware-configuration.nix
     "${nixosModules}/common"
-    "${nixosModules}/desktop/hyprland"
   ];
 
     # Set ahostname
-  networking.hostName = "nixos-virt";
+  networking.hostName = "proxnix-virt";
   fonts.fontconfig = {
   enable = true;
   subpixel.rgba = "bgr";
